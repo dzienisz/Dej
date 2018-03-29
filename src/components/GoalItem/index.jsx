@@ -1,16 +1,40 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { completeGoalRef  } from '../../firebase';
 import './style.css';
 
 class GoalItem extends Component {
+    completeGoal = () => {
+        // add to complete goals
+        // remove from this goal
+        const { email } = this.props.user;
+        const { title } = this.props.goal;
+        console.log('asdf', email, 'asdf', title);
+        completeGoalRef.push({ email, title })
+    }
+
     render() {
         const { email, title} = this.props.goal;
         return (
             <div className="goal">
                 <strong>{title}</strong>
-                <span> submitted by <em>{email}</em></span>
+                <span className="space"> submitted by <em>{email}</em></span>
+                <button
+                    className="btn btn-sm btn-primary"
+                    onClick={this.completeGoal}
+                >
+                    Complete
+                </button>
             </div>
         )
     }
 }
 
-export default GoalItem;
+function mapStateToProps(state) {
+    const { user } = state;
+    return {
+        user
+    }
+}
+
+export default connect(mapStateToProps)(GoalItem);
