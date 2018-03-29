@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import AddGoal from './AddGoal';
+import GoalList from './GoalList';
 
 import './App.css';
 
@@ -15,7 +16,7 @@ class App extends Component {
       <div className="App">
         <h3>Dej - Lista zakupów</h3>
         <AddGoal />
-        <div>Lista zakupów</div>
+        <GoalList />
         <button
           className="btn btn-danger"
           onClick={this.signOut}
@@ -28,9 +29,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-
-  }
+  return {}
 }
 
 export default connect(mapStateToProps, null)(App);
