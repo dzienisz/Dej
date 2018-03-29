@@ -15,6 +15,10 @@ class CompleteGoalList extends Component {
             this.props.setCompleted(completeGoals);
         })
     }
+
+    clearCompleted() {
+        completeGoalRef.set([]);
+    }
     
     render() {
         return (
@@ -32,6 +36,12 @@ class CompleteGoalList extends Component {
                         )
                     })
                 }
+                <button
+                    className="btn btn-primary"
+                    onClick={this.clearCompleted}
+                >
+                    Clear All
+                </button>
             </div>
         )
     }
