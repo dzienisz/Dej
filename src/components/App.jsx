@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import { firebaseApp } from '../firebase';
 import './App.css';
 
 class App extends Component {
+  signOut = () => {
+    firebaseApp.auth().signOut();
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button
+          className="btn btn-danger"
+          onClick={this.signOut}
+        >
+          Sign Out
+        </button>
       </div>
     );
   }
