@@ -16,7 +16,10 @@ class App extends Component {
       <div className="App">
         <h3>Dej - Lista zakupów</h3>
         <AddGoal />
+        <hr />
+        <h4>Lista</h4>
         <GoalList />
+        <hr />        
         <button
           className="btn btn-danger"
           onClick={this.signOut}
