@@ -2,7 +2,7 @@
   "name": "dej",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://dzienisz.github.io/Dej",
+  "homepage": "https://dzienisz.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -12,10 +12,10 @@
     "deploy": "gh-pages -d build"
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
   ],
   "dependencies": {
     "firebase": "^5.10.1",
