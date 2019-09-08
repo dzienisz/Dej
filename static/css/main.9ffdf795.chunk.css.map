@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css","style.css","App.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,SAAU,CACV,sBACF,CCAA,OACI,iBACJ,CCNA,WDCI,UCEJ,CAHA,KACE,iBAEF","file":"main.9ffdf795.chunk.css","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}\n",".goal {\n    margin: 5px;\n}",".App {\n  text-align: center;\n  margin: 5px;\n}"]}
