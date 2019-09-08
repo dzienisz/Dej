@@ -42,7 +42,6 @@ class AddGoal extends Component {
 
 function mapStateToProps(state) {
     const { user: { email }  } = state;
-    console.log(state);
     return {
         email
     }
